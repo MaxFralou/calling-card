@@ -1,0 +1,137 @@
+body {
+    max-width: 980px;
+    margin: 0 auto;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.25rem;
+    color: #0a0a0a;
+    letter-spacing: 2px;
+    line-height: 1.2;
+    background-color: #f38c32;
+}
+
+.wrapper {
+    max-width: 100%;
+    margin: 12px 24px;
+}
+
+.header__wrapper {
+    display: flex;
+    justify-content: center;
+    background-color: #F8B195;
+    border: 2px solid #000;
+    border-radius: 14px;
+    gap: 24px;
+}
+
+.header__title {
+    text-align: center;
+}
+
+.header__status {
+    font-size: 1.4rem;
+    margin: 2px 2px;
+    position: relative;
+}
+
+.header__status-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.header__status::after {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-image: url("./assets/github.svg");
+    background-size: contain;
+    margin-left: 2px;
+    transform: translateY(15%);
+}
+
+.main__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 12px;
+}
+
+.main__about,
+.main__create,
+.main__more,
+.main__go {
+    padding: 12px;
+    border: 2px solid #000;
+    border-radius: 14px;
+}
+
+.main__about {
+    background-color: #F67280;
+}
+
+.main__create {
+    background-color: #16A085;
+}
+
+.main__more {
+    background-color: #7F8C8D;
+}
+
+.main__go {
+    grid-column: span 2;
+    background-color: #E74C3C;
+}
+
+.footer__wrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: #979797;
+    border: 2px solid #000;
+    border-radius: 14px;
+    padding: 4px 2px 4px 10px;
+}
+
+.footer__title {
+    margin: 4px 4px;
+    text-align: start;
+}
+
+.footer__contacts {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.footer__contact-item {
+    display: flex;
+    align-items: center;
+}
+
+.footer__contact-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer__contact-icon {
+    width: 12px;
+    margin-right: 4px;
+}
+
+@media (max-width: 425px) {
+
+    .header__wrapper,
+    .main__wrapper,
+    .footer__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
